@@ -3,13 +3,11 @@ This repository contains the complete implementation of “Enhanced MicroDSC (Mi
 
 Research Paper:"Lightweight deep learning model for real-time acoustic bird pest detection on edge microcontrollers"
 
-Our model enables real-time bird pest detection on resource-constrained ESP32 microcontrollers, providing an affordable precision agriculture solution for African smallholder farmers while addressing manual labor issues in bird monitoring.
+Our model enables real-time bird pest detection on resource-constrained microcontrollers, providing an affordable precision agriculture solution for African smallholder farmers while addressing manual labor issues in bird monitoring.
 
 Key Features
-- **Ultra-lightweight architecture** optimized for ESP32 microcontrollers
-- **Real-time acoustic detection** of 11 bird species including quelea and village weaver
-- **Low power consumption** suitable for solar-powered field deployment
-- **Offline operation** - no internet connectivity required
+- **lightweight architecture** optimized for microcontrollers
+- **Real-time acoustic detection** of 10 bird species including quelea and village weaver
 - **Cost-effective** solution for resource-constrained agricultural environments
 
 Repository Structure
@@ -21,12 +19,13 @@ Contains ablation studies conducted to select the optimal model architecture and
 - Performance evaluation across varying constraint scenarios
 
 training/
-Contains the complete model training pipeline and evaluation framework.
+Contains the complete model training pipeline and evaluation framework:
 
 - Data preprocessing and feature extraction
 - Enhanced MicroDSC model training
+- Traditional CNN and standard DSC training for comparison
 - Performance evaluation and validation
-- Confusion matrix analysis and error characterization
+- Confusion matrix analysis
 - Model quantization for microcontroller deployment
 
 deployment/
@@ -37,7 +36,6 @@ Contains ESP32 microcontroller implementation for real-time field deployment.
 - Audio acquisition and preprocessing
 - Real-time classification pipeline
 - Real-time notification, once bird pests are detected
-**Deploy this** on ESP32 hardware for real-world bird pest classification.
 
 Requirements
 
@@ -95,7 +93,7 @@ For questions or collaboration opportunities, please contact: Micheline.kazeneza
 
 Acknowledgments
 
-This research was supported by the Regional Scholarship and Innovation Fund (RSIF) program and conducted at the University of Rwanda under the management of ICIPE.
+This research was supported by the Regional Scholarship and Innovation Fund (RSIF) program, under the management of ICIPE and conducted at the University of Rwanda.
 This research was conducted with financial support from the ICIPE–World Bank Financing Agreement No. D347-3A and the World Bank–Korea Trust Fund Agreement No. TF0A8639 under the PASET Regional Scholarship and Innovation Fund.
 
 **Keywords:** Bird pest detection, Edge AI, Microcontroller deployment, Acoustic classification, Precision agriculture, ESP32, Depthwise separable convolution, TinyML
